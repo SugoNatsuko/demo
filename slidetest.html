@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider Sample</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        /* --- スライダーの基本的なスタイル --- */
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .slider-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .slider-item {
+            padding: 0 10px; /* スライド間の余白 */
+            box-sizing: border-box;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .slider-item .content {
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        
+        h3, p {
+            margin: 0 0 10px 0;
+        }
+
+        /* --- 矢印のスタイル調整 --- */
+        .slick-prev,
+        .slick-next {
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+        }
+        .slick-prev:before,
+        .slick-next:before {
+            font-size: 40px;
+            color: #333;
+        }
+        .slick-prev {
+            left: -50px;
+        }
+        .slick-next {
+            right: -50px;
+        }
+
+        /* --- SP用のスタイル調整 (767px以下) --- */
+        @media (max-width: 767px) {
+            .slider-container {
+                width: 100%;
+            }
+            
+            /* centerModeで左右のスライドを見せるための調整 */
+            .slick-center .slider-item {
+                /* 中央の要素を少し大きくするなど、お好みで調整できます */
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+            }
+            
+            .slider-item {
+                transition: transform 0.3s ease;
+            }
+
+            .slick-prev {
+                left: 5px;
+            }
+            .slick-next {
+                right: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Slick Slider Demo</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+1" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+2" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+3" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+4" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+5" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+6" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+7" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+8" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+9" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+10" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+11" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="content">
+                    <img src="https://via.placeholder.com/300x200?text=Slide+12" alt="">
+                    <p>葉とらずりんご サンふじ 特別栽培/ネオニコ不使用</p>
+                    <strong>税込13,700円</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            // --- PCとSP共通の設定 ---
+            arrows: true,         // 左右の矢印を表示
+            dots: true,           // ドットを表示
+            infinite: true,       // ループを有効にする
+
+            // --- PC用の設定 (デフォルト) ---
+            slidesToShow: 4,      // 4枚表示
+            slidesToScroll: 4,    // 4枚ずつ切り替え
+
+            // --- レスポンシブ設定 ---
+            responsive: [
+                {
+                    breakpoint: 768, // 768px以下の画面サイズに適用
+                    settings: {
+                        // --- SP用の設定 ---
+                        slidesToShow: 1,      // 1枚表示
+                        slidesToScroll: 1,    // 1枚ずつ切り替え
+                        centerMode: true,     // 左右に前後のスライドを少し見せる
+                        centerPadding: '18%', // 見せる幅を調整
+                    }
+                }
+            ]
+        });
+    });
+    </script>
+
+</body>
+</html>
