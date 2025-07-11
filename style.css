@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 下部に配置 */
+    min-height: 100vh; /* 画面いっぱいの高さ */
+    padding-bottom: 20px; /* 下部に少し余白 */
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; /* 適度な最大幅 */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input-area {
+    display: flex;
+    align-items: flex-end;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#main-textarea {
+    flex-grow: 1;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    min-height: 40px; /* フォーカス前の高さ */
+    max-height: 120px; /* フォーカス後の最大高さ */
+    resize: none; /* ユーザーによるリサイズを禁止 */
+    overflow-y: auto; /* 必要に応じてスクロールバーを表示 */
+    font-size: 16px;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#main-textarea:focus {
+    outline: none;
+    border-color: #007AFF; /* フォーカス時のボーダー色 */
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+#main-textarea.focused {
+    min-height: 120px; /* フォーカス後の高さ */
+}
+
+.plus-button {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.plus-button:active {
+    background-color: #0056b3;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* ボタン間のスペース */
+}
+
+.action-buttons.hidden {
+    display: none;
+}
+
+.action-button {
+    background-color: #E0E0E0;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex: 1 1 auto; /* フレックスアイテムの成長と縮小 */
+    min-width: 80px; /* 最小幅 */
+    text-align: center;
+}
+
+.action-button:active {
+    background-color: #CCCCCC;
+}
