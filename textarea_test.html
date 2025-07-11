@@ -9,8 +9,9 @@
 <body>
     <div class="container">
         <div class="input-area">
-            <textarea id="main-textarea" placeholder="メッセージを入力"></textarea>
             <button id="plus-button" class="plus-button">+</button>
+            <textarea id="main-textarea" placeholder="メッセージを入力"></textarea>
+            <button id="send-button" class="send-button">送信</button>
         </div>
         <div id="action-buttons" class="action-buttons hidden">
             <button class="action-button">写真</button>
@@ -24,7 +25,9 @@
     <script>
         const textarea = document.getElementById('main-textarea');
         const plusButton = document.getElementById('plus-button');
+        const sendButton = document.getElementById('send-button');
         const actionButtons = document.getElementById('action-buttons');
+        const inputArea = document.querySelector('.input-area');
 
         textarea.addEventListener('focus', () => {
             textarea.classList.add('focused');
@@ -37,7 +40,20 @@
         });
 
         plusButton.addEventListener('click', () => {
-            actionButtons.classList.toggle('hidden');
+            const isHidden = actionButtons.classList.toggle('hidden');
+            if (isHidden) {
+                // アクションボタンが非表示になった場合（+に戻る）
+                textarea.style.display = 'block';
+                sendButton.style.display = 'block'; // テキストエリア表示時は送信ボタンも表示
+                plusButton.textContent = '+';
+                inputArea.classList.remove('action-mode');
+            } else {
+                // アクションボタンが表示された場合（Xになる）
+                textarea.style.display = 'none';
+                sendButton.style.display = 'none'; // アクションボタン表示時は送信ボタンも非表示
+                plusButton.textContent = '✕';
+                inputArea.classList.add('action-mode');
+            }
         });
     </script>
 </body>

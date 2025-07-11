@@ -24,6 +24,11 @@ body {
     border-radius: 20px;
     padding: 8px 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.input-area.action-mode {
+    justify-content: center; /* アクションモード時は中央寄せ */
 }
 
 #main-textarea {
@@ -39,6 +44,7 @@ body {
     line-height: 1.5;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    margin: 0 10px; /* プラスボタンと送信ボタンとの間に余白 */
 }
 
 #main-textarea:focus {
@@ -63,12 +69,29 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-left: 10px;
     flex-shrink: 0;
     transition: background-color 0.2s ease;
 }
 
 .plus-button:active {
+    background-color: #0056b3;
+}
+
+.send-button {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 18px; /* 半円形 */
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0;
+    display: block; /* 初期状態では表示 */
+    transition: background-color 0.2s ease;
+}
+
+.send-button:active {
     background-color: #0056b3;
 }
 
